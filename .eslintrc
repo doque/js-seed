@@ -1,0 +1,35 @@
+// Config file for linting using eslint
+{
+    // Configure rules here, http://eslint.org/docs/rules/
+    "rules": {
+
+        // Code style
+        "curly": 2,                     // specify curly brace conventions for all control statements
+        "linebreak-style": [2, "unix"], // unix line endings
+        "no-console": 1,                // avoid console.log
+        "no-undef": [2],                // throw error when using undefined variables
+        "no-var": 1,                    // use let/const intead of var
+        "semi": [2, "always"],          // require semicolons always
+
+        // Possible Errors
+        "strict": [1, "global"],        // enable strict mode
+        "eqeqeq": 1,                    // force comparisons to use ===
+        "no-extra-semi": 1,             // disallow unnecessary semicolons
+        "no-inner-declarations": 2,     // disallow function or variable declarations in nested blocks
+    },
+
+    "env": {
+        "node":     true,               // Node variables for webpack config
+        "browser":  true,               // provide browser variables
+        "commonjs": true,               // CommonJS modules
+        "es6":      true,               // use ES6 features
+        "jquery":   true                // provide jQuery variables
+    },
+
+    "extends": "eslint:recommended",    // http://eslint.org/docs/rules/#best-practices
+
+    "ecmaFeatures": {
+        "blockBindings":    true,       // needed for no-var
+        "modules":          true        // allow ES6 module import syntax
+    },
+}
